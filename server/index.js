@@ -23,7 +23,6 @@ app.use(express.static(path.join(__dirname, '../public/')));
 
 // send for root
 app.get('/*', function (req, res, next) {
-  console.log('sending', __dirname + '/../public/index.html');
   res.sendFile(app.get('indexHTMLPath'));
 });
 

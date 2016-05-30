@@ -12,7 +12,7 @@ var path = d3.geo.path()
 
 var g = svg.append('g');
 
-d3.json('world-110m2.json', function (err, topo) {
+d3.json('json/world-110m2.json', function (err, topo) {
   g.selectAll('path')
     .data(topojson.object(topo, topo.objects.countries).geometries)
     .enter().append('path').attr('d', path);
